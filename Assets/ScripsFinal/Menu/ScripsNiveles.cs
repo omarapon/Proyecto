@@ -18,10 +18,10 @@ public class ScripsNiveles : MonoBehaviour
     [SerializeField] private GameObject btnOpcionesO;
     [SerializeField] private GameObject btnCreditosO;
     [SerializeField] private GameObject btnSalirO;
-    private int StarNivel1 = 0;
-    private int StarNivel2 = 0;
-    private int StarNivel3 = 0;
-    private int StarNivel4 = 0;
+    public int StarNivel1 = 0;
+    public int StarNivel2 = 0;
+    public int StarNivel3 = 0;
+    public int StarNivel4 = 0;
     public Button Ni1;
     public Button Ni2;
     public Button Ni3;
@@ -33,12 +33,16 @@ public class ScripsNiveles : MonoBehaviour
 
       void Start()
       {
+        
+            
          LoadGame();   
+
       }
     public void AbrirMenu(){
          Time.timeScale = 1f;
          menuPrincipal.SetActive(true);
          btnRunnerExplorer.SetActive(false);
+         
    }
 
    public void LoadGame()
@@ -58,13 +62,23 @@ public class ScripsNiveles : MonoBehaviour
       GameData data = (GameData)bf.Deserialize(file);
       file.Close();
 
+      //usar datos generados
+      //StarNivel1 = 1;
+      //StarNivel2 = 0;
+      //StarNivel3 = 3;
+      //StarNivel4 = 1;
+
       //usar datos guardados
       StarNivel1 = data.Nivel1Star;
       StarNivel2 = data.Nivel2Star;
       StarNivel3 = data.Nivel3Star;
       StarNivel4 = data.Nivel4Star;
 
+
+
+        Debug.Log(StarNivel1 + "-" + StarNivel2 + "-" + StarNivel3 + "-" + StarNivel4);
       imprimirStar();
+      
 
     }
 

@@ -14,7 +14,7 @@ public class Nivel2Controller : MonoBehaviour
     public int lives = 3;
     int cont = 0, cont2 = 0;
     private int StarNivel1 = 0;
-    private int StarNivel2 = 1;
+    public int StarNivel2 = 0;
     private int StarNivel3 = 0;
     private int StarNivel4 = 0;
     void Start()
@@ -40,6 +40,7 @@ public class Nivel2Controller : MonoBehaviour
             file = File.Create(filePath);
 
         GameData data = new GameData();
+        Estrellas();
         data.Score = score;
         data.Live = lives;
         data.Nivel1Star=StarNivel1;
@@ -53,7 +54,6 @@ public class Nivel2Controller : MonoBehaviour
     }
     public void LoadGame()
     {
-        SaveGame();
         var filePath = Application.persistentDataPath + "/guardar.dat";
         FileStream file;
 

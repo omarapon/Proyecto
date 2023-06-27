@@ -19,6 +19,10 @@ public class Nivel3Controller : MonoBehaviour
     public GameObject Camara;
     public GameObject jet;
     public GameObject jet2; 
+    private int StarNivel1 = 0;
+    private int StarNivel2 = 0;
+    private int StarNivel3 = 0;
+    private int StarNivel4 = 0;
 
     private void Awake()
     {
@@ -93,7 +97,11 @@ public class Nivel3Controller : MonoBehaviour
         GameData data = new GameData();
         data.Score = score;
         data.Live = lives;
-        data.Bonus = false;
+        Estrellas();
+        data.Nivel1Star=StarNivel1;
+        data.Nivel2Star=StarNivel2;
+        data.Nivel3Star=StarNivel3;
+        data.Nivel4Star=StarNivel4;
 
         BinaryFormatter bf = new BinaryFormatter();
         bf.Serialize(file, data);
@@ -119,8 +127,17 @@ public class Nivel3Controller : MonoBehaviour
         //usar datos guardados
         score = data.Score;
         lives = data.Live;
-
+        StarNivel1 = data.Nivel1Star;
+        StarNivel2 = data.Nivel2Star;
+        StarNivel4 = data.Nivel4Star;
         GanarPuntos(0);
+    }
+
+    public void Estrellas(){
+        if(lives==0) StarNivel3 = 0;
+        else if(lives>=3) StarNivel3 = 1;
+        else if(lives>=5) StarNivel3 = 2;
+        else StarNivel3 = 3;
     }
     public void ReiniciarSave()
     {

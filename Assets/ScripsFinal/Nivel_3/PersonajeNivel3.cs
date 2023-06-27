@@ -187,6 +187,7 @@ public class PersonajeNivel3 : MonoBehaviour
         }
         if (other.gameObject.tag == "TP")
         {
+            gameManager.SaveGame();
             SceneManager.LoadScene(3);  //Volver al nivel regular
         }
     }

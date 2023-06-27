@@ -47,6 +47,7 @@ public class PersonajeNivel2 : MonoBehaviour
         cont = salto;
         gameManager = FindObjectOfType<Nivel2Controller>();
         gameManager.LoadGame();
+        gameManager.StarNivel2 = 1;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();

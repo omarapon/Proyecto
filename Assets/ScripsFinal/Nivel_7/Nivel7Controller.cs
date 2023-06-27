@@ -21,7 +21,7 @@ public class Nivel7Controller : MonoBehaviour
 
     void Start()
     {
-
+        LoadGame();
     }
     void Update()
     {
@@ -50,6 +50,8 @@ public class Nivel7Controller : MonoBehaviour
         data.Bonus = bonus;
         data.SaltoTriple = saltoTriple;
         Estrellas();
+        
+        Debug.Log(score + "a");
         data.Nivel1Star = StarNivel1;
         data.Nivel2Star = StarNivel2;
         data.Nivel3Star = StarNivel3;
@@ -60,10 +62,10 @@ public class Nivel7Controller : MonoBehaviour
         file.Close();
     }
     public void Estrellas(){
-        if(score==0) StarNivel1 = 0;
-        else if(score>=7) StarNivel1 = 1;
-        else if(score>=14) StarNivel1 = 2;
-        else StarNivel1 = 3;
+        if(score>=0 && score<=6) StarNivel1 = 0;
+        else if(score>=7 && score<=13) StarNivel1 = 1;
+        else if(score>=14 && score<=14) StarNivel1 = 2;
+        else if(score>=21) StarNivel1 = 3;
     }
 
     public void LoadGame()

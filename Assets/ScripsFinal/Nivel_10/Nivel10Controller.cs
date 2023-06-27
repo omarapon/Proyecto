@@ -17,10 +17,14 @@ public class Nivel10Controller : MonoBehaviour
     public float countdown = 40.0f;
     public bool inicio = false;
     public bool bonus = false;
+    private int StarNivel1 = 0;
+    private int StarNivel2 = 0;
+    private int StarNivel3 = 0;
+    private int StarNivel4 = 0;
 
     void Start()
     {
-
+        
     }
     void Update()
     {
@@ -30,11 +34,17 @@ public class Nivel10Controller : MonoBehaviour
             if (countdown >= 0.0f) countdown -= Time.deltaTime;
             else
             {
-                SceneManager.LoadScene(1);  //Volver al nivel regular
+                SceneManager.LoadScene(5);  
                 Debug.Log("Perdiste");
             }
         }
 
+    }
+    public void Estrellas(){
+        if(countdown>=15) StarNivel4 = 3;
+        else if(countdown>=10) StarNivel4 = 2;
+        else if(countdown>=5) StarNivel4 = 1;
+        else StarNivel4=0;
     }
 
     public void SaveGame()
@@ -52,7 +62,12 @@ public class Nivel10Controller : MonoBehaviour
         GameData data = new GameData();
         data.Score = score;
         data.Live = lives;
-        data.Bonus = bonus;
+        Estrellas();
+        Debug.Log(StarNivel1 + "-" + StarNivel2 + "-" + StarNivel3 + "-" + StarNivel4);
+        data.Nivel1Star=StarNivel1;
+        data.Nivel2Star=StarNivel2;
+        data.Nivel3Star=StarNivel3;
+        data.Nivel4Star=StarNivel4;
 
         BinaryFormatter bf = new BinaryFormatter();
         bf.Serialize(file, data);
@@ -80,6 +95,9 @@ public class Nivel10Controller : MonoBehaviour
         score = data.Score;
         lives = data.Live;
         bonus = data.Bonus;
+        StarNivel1 = data.Nivel1Star;
+        StarNivel2 = data.Nivel2Star;
+        StarNivel3 = data.Nivel3Star;
 
         GanarPuntos(0);
     }
