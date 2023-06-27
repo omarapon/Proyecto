@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &65927757
 RectTransform:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.3594055, y: -0.67970276}
+  m_AnchoredPosition: {x: -1.3594055, y: -0.6796875}
   m_SizeDelta: {x: 21.7499, y: 14.9532}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65927758
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 473053140}
   - component: {fileID: 473053139}
   m_Layer: 5
-  m_Name: BMRC (2)
+  m_Name: Giampiere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1289,7 +1289,7 @@ GameObject:
   - component: {fileID: 570785122}
   - component: {fileID: 570785121}
   m_Layer: 5
-  m_Name: BMRC (3)
+  m_Name: Made
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1375,7 +1375,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &644619476
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2384,7 +2384,7 @@ GameObject:
   - component: {fileID: 1121424293}
   - component: {fileID: 1121424292}
   m_Layer: 5
-  m_Name: BMRC (1)
+  m_Name: Victor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3240,7 +3240,7 @@ GameObject:
   - component: {fileID: 1742349508}
   - component: {fileID: 1742349507}
   m_Layer: 5
-  m_Name: BMRC
+  m_Name: Omar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3299,7 +3299,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Brandon Rodriguez
+  m_Text: Omar Quispe
 --- !u!222 &1742349508
 CanvasRenderer:
   m_ObjectHideFlags: 0
