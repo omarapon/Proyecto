@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class FuegoBalaController : MonoBehaviour
+{
+    void Start()
+    {
+        Destroy(this.gameObject, 0.2f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    
+}
